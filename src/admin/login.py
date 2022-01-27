@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
-from firebase_db import db
+from src.actions import admin_login as login
 
 admin_login = tk.Tk()
  
@@ -24,10 +24,10 @@ def printValues():
         'email': admin_username.get(),
         'password': admin_password.get()
     }
-    db.child('admin').push(data)
+    login(data)
 
 submit_login = tk.StringVar()
-submit_btn = tk.Button(frame, textvariable=submit_login, command=lambda:sprintValues(), font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
+submit_btn = tk.Button(frame, textvariable=submit_login, command=lambda:printValues(), font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
 submit_login.set("Submit")
 submit_btn.grid(column=1, row=15)
 
