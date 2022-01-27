@@ -24,7 +24,7 @@ def printValues():
         'email': admin_username.get(),
         'password': admin_password.get()
     }
-    login(data)
+    login(data, admin_login)
 
 submit_login = tk.StringVar()
 submit_btn = tk.Button(frame, textvariable=submit_login, command=lambda:printValues(), font="Raleway", bg="#20bebe", fg="white", height=2, width=15)

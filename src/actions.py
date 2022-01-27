@@ -1,12 +1,13 @@
 from firebase_db import db
 
 
-def admin_login(data):
+def admin_login(data, frame):
     result = db.child('admin').get()
     for element in result.each():
         if(data == element.val()):
-            print(True)
-            break
+            frame.destroy()
+            from src.admin.dashboard import canvas
+            return(True)
     print(False)
 
 def to_admin_login(root):
