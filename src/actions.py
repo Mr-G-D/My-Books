@@ -43,3 +43,9 @@ def students_login(data, frame):
             from src.admin.books import books_table
             return(True)
     print(False)
+
+
+def students_register(data, frame):
+    db.child('users').push(data)
+    frame.destroy()
+    from src.admin.books import books_table
