@@ -1,5 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+from src.actions import to_books
 
 
 root = tk.Tk()
@@ -23,7 +24,7 @@ student_btn.grid(column=1, row=2)
 
 
 books = tk.StringVar()
-books_btn = tk.Button(root, textvariable=books, font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
+books_btn = tk.Button(root, command=lambda:to_books(root), textvariable=books, font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
 books.set("Books")
 books_btn.grid(column=1, row=3)
 

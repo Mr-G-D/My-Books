@@ -14,3 +14,6 @@ def to_admin_login(root):
     root.destroy()
     from src.admin.login import admin_login
 
+def to_books(dashboard):
+    dashboard.destroy()
+    from src.admin.books import my_books
