@@ -10,17 +10,22 @@ frame.grid( rowspan=3, columnspan=3)
 
 ttk.Label(frame, text='students Register', font=("Raleway", 25), padding=10).grid(column=1, row=0)
 
-ttk.Label(frame, text="Email-ID", font=("Raleway", 15)).grid(column=1,row=3, pady=20)
+ttk.Label(frame, text="Name", font=("Raleway", 15)).grid(column=1,row=3, pady=20)
+students_name = tk.Entry(frame, bg="white", width=50)
+students_name.grid(column=1, row=4)
+
+ttk.Label(frame, text="Email-ID", font=("Raleway", 15)).grid(column=1,row=6, pady=20)
 students_username = tk.Entry(frame, bg="white", width=50)
-students_username.grid(column=1, row=4)
+students_username.grid(column=1, row=7)
 
 
-ttk.Label(frame, text="Password", font=("Raleway", 15)).grid(column=1,row=6, pady=20)
+ttk.Label(frame, text="Password", font=("Raleway", 15)).grid(column=1,row=9, pady=20)
 students_password = tk.Entry(frame, show="*", bg="white", width=50)
-students_password.grid(column=1, row=7, pady=10)
+students_password.grid(column=1, row=10, pady=10)
 
 def printValues():
     data = {
+        'name': students_name.get(),
         'email': students_username.get(),
         'password': students_password.get()
     }
