@@ -17,3 +17,16 @@ def to_admin_login(root):
 def to_books(dashboard):
     dashboard.destroy()
     from src.admin.books import my_books
+
+
+
+
+#STUDENTS
+
+def to_students_index(index):
+    index.destroy()
+    from src.students.index import root
+
+def to_students_login(index):
+    index.destroy()
+    from src.students.login import submit_login
