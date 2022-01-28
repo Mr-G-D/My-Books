@@ -5,7 +5,7 @@ from src.actions import to_students_login, to_students_register
 
 
 root = tk.Tk()
-
+root.title('Welcome')
 students_index = tk.Canvas(root, width=600, height=300)
 students_index.grid(columnspan=3, rowspan=3)
 

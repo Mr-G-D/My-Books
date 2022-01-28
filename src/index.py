@@ -5,7 +5,7 @@ from src.actions import to_admin_login, to_students_index
 
 
 root = tk.Tk()
-
+root.title('Murdock Books')
 canvas = tk.Canvas(root, width=600, height=300)
 canvas.grid(columnspan=3, rowspan=3)
 

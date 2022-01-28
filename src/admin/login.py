@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 from src.actions import admin_login as login
 
 admin_login = tk.Tk()
- 
+admin_login.title('Admin Login')
 frame = ttk.Frame(admin_login, width=600, height=300)
 frame.grid( rowspan=3, columnspan=3)
 

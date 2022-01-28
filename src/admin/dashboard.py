@@ -4,7 +4,7 @@ from src.actions import to_books, to_students
 
 
 root = tk.Tk()
-
+root.title('Admin Dashboard')
 canvas = tk.Canvas(root, width=600, height=300)
 canvas.grid(columnspan=3, rowspan=3)
 
