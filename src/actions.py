@@ -16,7 +16,11 @@ def to_admin_login(root):
 
 def to_books(dashboard):
     dashboard.destroy()
-    from src.admin.books import my_books
+    from src.admin.books import books_table
+
+def to_students(dashboard):
+    dashboard.destroy()
+    from src.admin.students import students_table
 
 
 

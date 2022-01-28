@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-from src.actions import to_books
+from src.actions import to_books, to_students
 
 
 root = tk.Tk()
@@ -18,7 +18,7 @@ logo_label.grid(column=1, row=1)
 
 
 student = tk.StringVar()
-student_btn = tk.Button(root, textvariable=student, font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
+student_btn = tk.Button(root, command=lambda:to_students(root), textvariable=student, font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
 student.set("Students")
 student_btn.grid(column=1, row=2)
 
