@@ -34,3 +34,12 @@ def to_students_login(index):
 def to_students_register(index):
     index.destroy()
     from src.students.register import students_register
+
+def students_login(data, frame):
+    result = db.child('users').get()
+    for element in result.each():
+        if(data == element.val()):
+            frame.destroy()
+            from src.admin.books import books_table
+            return(True)
+    print(False)

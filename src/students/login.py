@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
-# from src.actions import students_login as login
+from src.actions import students_login as login
 
 students_login = tk.Tk()
  
@@ -24,7 +24,7 @@ def printValues():
         'email': students_username.get(),
         'password': students_password.get()
     }
-    # login(data, students_login)
+    login(data, students_login)
 
 submit_login = tk.StringVar()
 submit_btn = tk.Button(frame, textvariable=submit_login, command=lambda:printValues(), font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
