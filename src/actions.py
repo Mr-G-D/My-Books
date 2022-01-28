@@ -29,4 +29,8 @@ def to_students_index(index):
 
 def to_students_login(index):
     index.destroy()
-    from src.students.login import submit_login
+    from src.students.login import students_login
+
+def to_students_register(index):
+    index.destroy()
+    from src.students.register import students_register

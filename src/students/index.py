@@ -1,7 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 from firebase_db import db
-from src.actions import to_admin_login
+from src.actions import to_students_login, to_students_register
 
 
 root = tk.Tk()
