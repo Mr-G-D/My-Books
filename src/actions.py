@@ -42,7 +42,7 @@ def to_students_register(index):
 def students_login(data, frame):
     result = db.child('users').get()
     for element in result.each():
-        if(data == element.val()):
+        if(data['email'] == element.val()['email'] and data['password'] == element.val()['password']):
             frame.destroy()
             from src.admin.books import books_table
             return(True)
